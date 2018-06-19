@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Desarrollo Smart Contracts</title>
+
+    <meta name="author" content="Maximiliano Cañellas">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+<div class="reveal">
+
+  <div class="slides">
+      <section>
+        <img src="img/1.png" style="border: 0;">
+        <br />
+        <br />
+        <h2>Intruducción al desarrollo de Smart Contracts</h2>
+        <br/>
+        <h4>Maximiliano Cañellas</h4>
+          <center>Cryptologic Law & Fintech</center>
+          <center> <a href="https://cryptologic.io" target="_blank">cryptologic.io</a>
+      </section>
+      <section>
+        <section>
+          <h2>¿Qué es un Smart Contract?</h2>
+          <p>Un Smart Contract es, básicamente, un programa que tiene  un set de instrucciones predefinidos y que funciona sobre una plataforma Blockchain.</p>
+        </section>
+          <section>
+            <h2>¿Cómo funciona?</h2>
+            <ul>
+              <li>OPCodes + complejos (que Bitcoin)</li>
+              <li>EVM based blockchains</li>
+              <li>Consumen unidades de gas GAS</li>
+              <li>Aplicaciones descentralizadas / transparentes (DApps)</li>
+            </ul>
+          </section>
+          <section>
+              <h2>Existen diferentes tipos: </h2>
+              <ol>
+                <li>EVMs (Ethereum)</li>
+                <li>Chaincode (Hyperledger)</li>
+                <li>Otros </li>
+              </ol>
+          </section>
+          <section>
+            <h2>Componentes de un Smart Contract</h2>
+            <ul>
+              <li>ABI (Application Binary Interface)</li>
+              <li>Source Code</li>
+              <li>Bytecode</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Algunas DApps</h2>
+              <ul>
+                <li>CryptoKitties</li>
+                <li>CryptoCup</li>
+                <li>Tokens ERC20 (ICOs)</li>
+              </ul>
+          </section>
+      </section>
+      <section>
+        <section>
+            <h2>Lenguajes para Smart Contracts</h2>
+            <ol>
+              <li>Solidity (JSish like)</li>
+              <li>Serpent (Python like)</li>
+              <li>LLL (¿?) </li>
+              <li>Otros</li>
+            </ol>
+        </section>
+        <section>
+          <h2>Algunas particularidas de los Smart Contracts</h2>
+          <ol>
+            <li>Las direcciones son aleatorias</li>
+            <li>Las direcciones públicas NO poseen privkeys asociadas a la misma</li>
+            <li>Los contratos pueden contener balances (Ether/Tokens)</li>
+            <li>Una vez deployeados los contratos no pueden modificarse</li>
+            <li>Se pueden decir que existen dos tipos de llamadas a contratos (Calls y Transactions)</li>
+          </ol>
+        </section>
+        <section>
+          <h2>Configurando el entorno</h2>
+          <p>Para poder probar nuestros Smart Contracts necesitamos una EVM disponible donde poder probar la funcionalidad <b>sin costo asociado de GAS/Ether real</b></p>
+          <br/>
+          <ul>
+            <b>Componentes:</b>
+            <br/>
+            <br/>
+            <li>Compilador</li>
+            <li>EVM</li>
+            <li>IDE</li>
+            <li>Framework de testing</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Herramientas a utilizar</h2>
+          <ol>
+            <li>Solc (compiler)</li>
+            <li>EVM (Testrpc / Ganache)</li>
+            <li>Sublime/Atom/VSCode/otros <- (Ninguno es el mejor no quiero desatar una guerra nerd)</li>
+            <li>Truffle (unit testing)</li>
+            <li>Web3 (conexión programática a blockchain/contratos)</li>
+          </ol>
+        </section>
+      </section>
+      <section>
+        <h2>¡Hands on!</h2>
+        <p>Repo: <a href="https://github.com/cryptol0g1c/truffle-test-boilerplate">https://github.com/cryptol0g1c/truffle-test-boilerplate</a></p>
+      </section>
+
+      <section>
+        <h2>¡Muchas gracias!</h2>
+        <br/>
+        <h3>¿Preguntas?</h3>
+        <br/>
+        <img src="img/preguntas.jpg" style="border: 0;">
+        <br/>
+        <h4>Estamos sumando programadores al staff ¿interesado/a?</h4>
+        <b>Contactanos con tu CV/Github en: jobs@cryptologic.io</b>
+      </section>
+
+  </div> <!-- slides -->
+
+</div> <!-- reveal -->
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
